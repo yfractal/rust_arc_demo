@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require_relative "rust_arc/version"
+require 'rutie'
 
 module RustArc
-  class Error < StandardError; end
-  # Your code goes here...
+  Rutie.new(:ruby_example).init 'Init_ruby_example', __dir__
 end
