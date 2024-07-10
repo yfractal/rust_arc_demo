@@ -29,11 +29,6 @@ impl Into<AnyObject> for RubyObject {
     }
 }
 
-impl Drop for RubyObject {
-    // drop nothing, gc was handled by Ruby
-    fn drop(&mut self) {}
-}
-
 pub struct Store {
     hash_map: HashMap<String, Arc<RubyObject>>,
 }
